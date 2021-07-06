@@ -6,12 +6,28 @@ using UnityEngine.SceneManagement;
 public class TransitionScene : MonoBehaviour
 {
     public string SceneToLoad;
+    private float waitToLoadNextScene = 1f;
+    private bool loadNextScene;
 
     private void Start()
     {
-        if(PlayerManager.instance.LastAreaTransitionUsed != "Start" && PlayerManager.instance.LastAreaTransitionUsed == this.name)
+        waitToLoadNextScene = 1f;
+        if (PlayerManager.instance.LastAreaTransitionUsed != "Start" && PlayerManager.instance.LastAreaTransitionUsed == this.name)
         {
             PlayerManager.instance.transform.position = transform.position;
+        }
+        UIFade.UIinstance.FadeToWhite();
+    }
+
+    private void Update()
+    {
+        if(loadNextScene)
+        {
+            waitToLoadNextScene -= Time.deltaTime;
+        }
+        if(waitToLoadNextScene <= 0)
+        {
+            SceneManager.LoadScene(SceneToLoad);
         }
     }
 
@@ -20,9 +36,8 @@ public class TransitionScene : MonoBehaviour
         if(other.tag == "Player")
         {
             PlayerManager.instance.LastAreaTransitionUsed = this.name;
-
-            SceneManager.LoadScene(SceneToLoad);
-
+            UIFade.UIinstance.FadeToBlack();
+            loadNextScene = true;
         }
     }
 
