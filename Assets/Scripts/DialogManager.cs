@@ -16,14 +16,29 @@ public class DialogManager : MonoBehaviour
 
     void Start()
     {
-
+        DialogueText.text = DialogueLines[currentLine] + " \n\t";
     }
 
     void Update()
     {
-        if(currentLine >= 0 && currentLine < DialogueLines.Length)
+        if(DialogueBox.activeInHierarchy)
         {
-            DialogueText.text = DialogueLines[currentLine];
+            if (Input.GetButtonUp("Fire1"))
+            {
+                currentLine++;
+
+                if (currentLine < DialogueLines.Length)
+                {
+                    DialogueText.text = DialogueLines[currentLine] + " \n\t";
+                } else
+                {
+                    DialogueBox.SetActive(false);
+                }
+
+            }
         }
+
+
+        
     }
 }

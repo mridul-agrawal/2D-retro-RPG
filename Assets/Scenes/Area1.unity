@@ -10221,6 +10221,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 685465699, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -4.522583
+      objectReference: {fileID: 0}
     - target: {fileID: 750111331, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.3043585
@@ -10245,13 +10249,41 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 2.4104176
       objectReference: {fileID: 0}
+    - target: {fileID: 1653948957, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -5.1642
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653948957, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.6795
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653948958, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+      propertyPath: m_text
+      value: "New Text Testing testing \n2"
+      objectReference: {fileID: 0}
     - target: {fileID: 1653948958, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
       propertyPath: m_fontSize
-      value: 17.6
+      value: 10.4
       objectReference: {fileID: 0}
     - target: {fileID: 1653948958, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
       propertyPath: m_fontSizeMin
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653948958, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653948958, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+      propertyPath: m_lineSpacingMax
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653948958, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+      propertyPath: m_charWidthMaxAdj
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653948958, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1999548258, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
       propertyPath: m_fontSize
@@ -10410,7 +10442,7 @@ MonoBehaviour:
   - a
   - test
   - array
-  currentLine: 4
+  currentLine: 0
 --- !u!1001 &8384176481065311465
 PrefabInstance:
   m_ObjectHideFlags: 0
