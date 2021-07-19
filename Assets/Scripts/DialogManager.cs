@@ -14,9 +14,11 @@ public class DialogManager : MonoBehaviour
     public string[] DialogueLines;
     public int currentLine;
 
+    public static DialogManager DM_Instance;
+
     void Start()
     {
-        DialogueText.text = DialogueLines[currentLine] + " \n\t";
+        DM_Instance = this;
     }
 
     void Update()
@@ -25,8 +27,6 @@ public class DialogManager : MonoBehaviour
         {
             if (Input.GetButtonUp("Fire1"))
             {
-                currentLine++;
-
                 if (currentLine < DialogueLines.Length)
                 {
                     DialogueText.text = DialogueLines[currentLine] + " \n\t";
@@ -35,10 +35,19 @@ public class DialogManager : MonoBehaviour
                     DialogueBox.SetActive(false);
                 }
 
+                currentLine++;
+
             }
         }
-
-
-        
     }
+
+    public void ShowDialogue(string[] lines)
+    {
+        DialogueLines = lines;
+        currentLine = 0;
+        DialogueText.text = DialogueLines[currentLine];
+        DialogueBox.SetActive(true);
+
+    }
+
 }

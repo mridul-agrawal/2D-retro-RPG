@@ -110,10 +110,10 @@ RectTransform:
   m_Father: {fileID: 685465699}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.775431}
-  m_AnchorMax: {x: 0.372, y: 1}
-  m_AnchoredPosition: {x: 4.0981445, y: 1.910408}
-  m_SizeDelta: {x: 8.196411, y: 13.458}
+  m_AnchorMin: {x: 0, y: 0.75810903}
+  m_AnchorMax: {x: 0.3043585, y: 1}
+  m_AnchoredPosition: {x: -0.3092041, y: 2.4104176}
+  m_SizeDelta: {x: -0.6182003, y: 12.458}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &750111333
 CanvasRenderer:
@@ -187,8 +187,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.629}
-  m_AnchoredPosition: {x: 0.5097656, y: 5.8}
-  m_SizeDelta: {x: -21.5488, y: -7.4052}
+  m_AnchoredPosition: {x: 0.5097656, y: 4.6795}
+  m_SizeDelta: {x: -21.5488, y: -5.1642}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1653948959
 CanvasRenderer:
@@ -218,9 +218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'New Text Testing testing
-
-    Next Line'
+  m_text: "New Text Testing testing \n2"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7df6ac06c11c3244c8897dfff1ffcde8, type: 2}
   m_sharedMaterial: {fileID: -2720757039972827770, guid: 7df6ac06c11c3244c8897dfff1ffcde8, type: 2}
@@ -247,11 +245,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 15
+  m_fontSize: 10.4
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 8
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -381,11 +379,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.4
+  m_fontSize: 23.25
   m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 8
   m_fontSizeMax: 100
   m_fontStyle: 33
   m_HorizontalAlignment: 2
@@ -436,13 +434,14 @@ GameObject:
   - component: {fileID: 6859384739889438921}
   - component: {fileID: 6859384739889438926}
   - component: {fileID: 6859384739889438927}
+  - component: {fileID: 6859384739713312963}
   m_Layer: 5
   m_Name: UI Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6859384739889438923
 RectTransform:
   m_ObjectHideFlags: 0
@@ -541,6 +540,29 @@ MonoBehaviour:
   fadeSpeed: 1
   shouldFadeToBlack: 0
   shouldFadeToWhite: 0
+--- !u!114 &6859384739713312963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6859384739889438924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042daf20c6f3c0e4fb8ab644a23e51b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueText: {fileID: 1653948958}
+  SpeakerText: {fileID: 1999548258}
+  DialogueBox: {fileID: 685465698}
+  SpeakerBox: {fileID: 750111330}
+  DialogueLines:
+  - This
+  - is
+  - a
+  - test
+  - array
+  currentLine: 0
 --- !u!1 &6859384741635469258
 GameObject:
   m_ObjectHideFlags: 0
