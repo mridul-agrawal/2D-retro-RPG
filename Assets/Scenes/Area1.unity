@@ -10221,6 +10221,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 750111331, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.3043585
+      objectReference: {fileID: 0}
+    - target: {fileID: 750111331, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.75810903
+      objectReference: {fileID: 0}
+    - target: {fileID: 750111331, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -0.6182003
+      objectReference: {fileID: 0}
+    - target: {fileID: 750111331, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 12.458
+      objectReference: {fileID: 0}
+    - target: {fileID: 750111331, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3092041
+      objectReference: {fileID: 0}
+    - target: {fileID: 750111331, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.4104176
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653948958, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+      propertyPath: m_fontSize
+      value: 17.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653948958, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1999548258, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+      propertyPath: m_fontSize
+      value: 23.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1999548258, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6859384739889438923, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -10311,6 +10351,66 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+--- !u!1 &6859384739713312958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6859384739889438924, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+  m_PrefabInstance: {fileID: 6859384739713312957}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6859384739713312959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 750111330, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+  m_PrefabInstance: {fileID: 6859384739713312957}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6859384739713312960 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 685465698, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+  m_PrefabInstance: {fileID: 6859384739713312957}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6859384739713312961 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1999548258, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+  m_PrefabInstance: {fileID: 6859384739713312957}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6859384739713312962 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1653948958, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
+  m_PrefabInstance: {fileID: 6859384739713312957}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6859384739713312963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6859384739713312958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042daf20c6f3c0e4fb8ab644a23e51b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueText: {fileID: 6859384739713312962}
+  SpeakerText: {fileID: 6859384739713312961}
+  DialogueBox: {fileID: 6859384739713312960}
+  SpeakerBox: {fileID: 6859384739713312959}
+  DialogueLines:
+  - This
+  - is
+  - a
+  - test
+  - array
+  currentLine: 4
 --- !u!1001 &8384176481065311465
 PrefabInstance:
   m_ObjectHideFlags: 0
