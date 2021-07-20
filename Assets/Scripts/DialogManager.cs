@@ -53,13 +53,14 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    public void ShowDialogue(string[] lines)
+    public void ShowDialogue(string[] lines, bool isPerson)
     {
         DialogueLines = lines;
         currentLine = 0;
         CheckIfName();
         DialogueText.text = DialogueLines[currentLine];
         DialogueBox.SetActive(true);
+        SpeakerBox.SetActive(isPerson);
         currentLine++;
         PlayerManager.instance.canMove = false;
     }

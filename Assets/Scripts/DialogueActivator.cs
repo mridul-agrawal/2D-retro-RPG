@@ -7,7 +7,7 @@ public class DialogueActivator : MonoBehaviour
     public string[] Lines;
 
     public bool canActive;
-
+    public bool isPerson;
 
     void Start()
     {
@@ -24,8 +24,8 @@ public class DialogueActivator : MonoBehaviour
                 DialogManager.DM_Instance.justFinished = false;
                 return;
             }
-
-            DialogManager.DM_Instance.ShowDialogue(Lines);
+            
+            DialogManager.DM_Instance.ShowDialogue(Lines, isPerson);
         }
     }
 
