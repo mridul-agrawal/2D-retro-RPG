@@ -49,7 +49,11 @@ public class DialogueActivator : MonoBehaviour
     {
         for(int i=0; i<Lines.Length; i++)
         {
-            Lines[i] = Lines[i] + " \n\t ";
+            if (Lines[i].StartsWith("1-"))
+            {
+                Lines[i] = Lines[i] + " \n\t ";
+                Lines[i] = Lines[i].Replace("1-", "");
+            }
         }
     }
 

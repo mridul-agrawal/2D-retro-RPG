@@ -19,7 +19,15 @@ public class DialogManager : MonoBehaviour
 
     void Start()
     {
-        DM_Instance = this;
+        if(DM_Instance == null)
+        {
+            DM_Instance = this;
+        } else
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(this);
     }
 
     void Update()
@@ -30,11 +38,10 @@ public class DialogManager : MonoBehaviour
             {
                 if (currentLine < DialogueLines.Length)
                 {
-                    Debug.Log("Inside if");
+                    CheckIfName();
                     DialogueText.text = DialogueLines[currentLine];
                 } else
                 {
-                    Debug.Log("Inside else");
                     DialogueBox.SetActive(false);
                     justFinished = true;
                     PlayerManager.instance.canMove = true;
@@ -48,13 +55,22 @@ public class DialogManager : MonoBehaviour
 
     public void ShowDialogue(string[] lines)
     {
-        Debug.Log("Inside ShowDialogue");
         DialogueLines = lines;
         currentLine = 0;
+        CheckIfName();
         DialogueText.text = DialogueLines[currentLine];
         DialogueBox.SetActive(true);
         currentLine++;
         PlayerManager.instance.canMove = false;
+    }
+
+    public void CheckIfName()
+    {
+        if(DialogueLines[currentLine].StartsWith("n-"))
+        {
+            SpeakerText.text = DialogueLines[currentLine].Replace("n-", "");
+            currentLine++;
+        }
     }
 
 }
