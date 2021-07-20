@@ -12,6 +12,7 @@ public class PlayerManager : MonoBehaviour
     public Transform startPosition;
     private Vector2 minBound;
     private Vector2 maxBound;
+    public bool canMove = true;
 
     public static PlayerManager instance;
 
@@ -65,20 +66,29 @@ public class PlayerManager : MonoBehaviour
 
     public void HandlePlayerInput()
     {
-        playerRigidBody.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * movingSpeed;
+        if (canMove) 
+        {
+            playerRigidBody.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * movingSpeed;
+        } else
+        {
+            playerRigidBody.velocity = Vector2.zero;
+        }
     }
 
 
     public void HandlePlayerAnimations()
     {
-        playerAnimator.SetFloat("MoveX", playerRigidBody.velocity.x);
-        playerAnimator.SetFloat("MoveY", playerRigidBody.velocity.y);
-
-        if(Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1 || 
-            Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
+        if (canMove)
         {
-            playerAnimator.SetFloat("LastMoveX", Input.GetAxisRaw("Horizontal"));
-            playerAnimator.SetFloat("LastMoveY", Input.GetAxisRaw("Vertical"));
+            playerAnimator.SetFloat("MoveX", playerRigidBody.velocity.x);
+            playerAnimator.SetFloat("MoveY", playerRigidBody.velocity.y);
+
+            if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1 ||
+                Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
+            {
+                playerAnimator.SetFloat("LastMoveX", Input.GetAxisRaw("Horizontal"));
+                playerAnimator.SetFloat("LastMoveY", Input.GetAxisRaw("Vertical"));
+            }
         }
     }
 

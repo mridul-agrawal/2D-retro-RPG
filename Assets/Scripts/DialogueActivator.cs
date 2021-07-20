@@ -11,13 +11,20 @@ public class DialogueActivator : MonoBehaviour
 
     void Start()
     {
-        
+        RectifyLines();
     }
 
     void Update()
     {
-        if(canActive && Input.GetButtonDown("Fire1") && !DialogManager.DM_Instance.DialogueBox.activeInHierarchy)
+        if(canActive && Input.GetButtonUp("Fire1") && !DialogManager.DM_Instance.DialogueBox.activeInHierarchy)
         {
+            // Dont Open Dialogue Box if it has just been closed in the same frame by DialogManager.
+            if(DialogManager.DM_Instance.justFinished)
+            {
+                DialogManager.DM_Instance.justFinished = false;
+                return;
+            }
+
             DialogManager.DM_Instance.ShowDialogue(Lines);
         }
     }
@@ -35,6 +42,14 @@ public class DialogueActivator : MonoBehaviour
         if (collision.tag == "Player")
         {
             canActive = false;
+        }
+    }
+
+    public void RectifyLines()
+    {
+        for(int i=0; i<Lines.Length; i++)
+        {
+            Lines[i] = Lines[i] + " \n\t ";
         }
     }
 

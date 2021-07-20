@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &685465699
 RectTransform:
   m_ObjectHideFlags: 0
@@ -441,7 +441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6859384739889438923
 RectTransform:
   m_ObjectHideFlags: 0
@@ -556,12 +556,7 @@ MonoBehaviour:
   SpeakerText: {fileID: 1999548258}
   DialogueBox: {fileID: 685465698}
   SpeakerBox: {fileID: 750111330}
-  DialogueLines:
-  - This
-  - is
-  - a
-  - test
-  - array
+  DialogueLines: []
   currentLine: 0
 --- !u!1 &6859384741635469258
 GameObject:

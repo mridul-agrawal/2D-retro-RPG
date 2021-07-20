@@ -13,6 +13,7 @@ public class DialogManager : MonoBehaviour
 
     public string[] DialogueLines;
     public int currentLine;
+    public bool justFinished;
 
     public static DialogManager DM_Instance;
 
@@ -29,10 +30,14 @@ public class DialogManager : MonoBehaviour
             {
                 if (currentLine < DialogueLines.Length)
                 {
-                    DialogueText.text = DialogueLines[currentLine] + " \n\t";
+                    Debug.Log("Inside if");
+                    DialogueText.text = DialogueLines[currentLine];
                 } else
                 {
+                    Debug.Log("Inside else");
                     DialogueBox.SetActive(false);
+                    justFinished = true;
+                    PlayerManager.instance.canMove = true;
                 }
 
                 currentLine++;
@@ -43,11 +48,13 @@ public class DialogManager : MonoBehaviour
 
     public void ShowDialogue(string[] lines)
     {
+        Debug.Log("Inside ShowDialogue");
         DialogueLines = lines;
         currentLine = 0;
         DialogueText.text = DialogueLines[currentLine];
         DialogueBox.SetActive(true);
-
+        currentLine++;
+        PlayerManager.instance.canMove = false;
     }
 
 }
