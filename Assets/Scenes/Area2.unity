@@ -9894,6 +9894,65 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21b11d0813e70af40ac059bb0347d6ae, type: 3}
+--- !u!1 &1590098622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1590098624}
+  - component: {fileID: 1590098623}
+  m_Layer: 0
+  m_Name: PlayerStats
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1590098623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590098622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff381a44a8be7d44956c53094d1b095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  maxHealth: 100
+  mana: 40
+  maxMana: 40
+  currentExp: 0
+  level: 0
+  strength: 10
+  defense: 12
+  magic: 12
+  resistance: 8
+  weaponStrength: 5
+  armourStrength: 8
+  weaponEquipped: 
+  armourEquipped: 
+  expProgression: 6400000096000000c8000000fa0000002c0100009001000026020000bc02000084030000b0040000
+  expToAdd: 150
+--- !u!4 &1590098624
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590098622}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.2257094, y: -5.6660995, z: 0.14555827}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1756764611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9911,11 +9970,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6420646433881406090, guid: a469814ca9395a449a7e965e62ef7324, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.38
+      value: -4.59
       objectReference: {fileID: 0}
     - target: {fileID: 6420646433881406090, guid: a469814ca9395a449a7e965e62ef7324, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.85
+      value: -12.04
       objectReference: {fileID: 0}
     - target: {fileID: 6420646433881406090, guid: a469814ca9395a449a7e965e62ef7324, type: 3}
       propertyPath: m_LocalPosition.z
