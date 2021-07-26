@@ -55,7 +55,6 @@ public class PlayerStats : ScriptableObject
         }
     }
 
-
     public void LevelUp()
     {
         currentLevel++;
@@ -70,18 +69,18 @@ public class PlayerStats : ScriptableObject
     public void SavePlayerStats()
     {
         string royStatsJSON = JsonUtility.ToJson(this);
-        File.WriteAllText(Application.dataPath + "/Saves/saveFileRoyStats.json", royStatsJSON);
+        File.WriteAllText(Application.dataPath + "/Saves/saveFile" + this.name + "Stats.json", royStatsJSON);
     }
 
     public void LoadPlayerStats()
     {
-        string json = File.ReadAllText(Application.dataPath + "/Saves/saveFileRoyStats.json");
+        string json = File.ReadAllText(Application.dataPath + "/Saves/saveFile" + this.name + "Stats.json");
         JsonUtility.FromJsonOverwrite(json, this);
     }
 
     public void LoadBasePlayerStats()
     {
-        string json = File.ReadAllText(Application.dataPath + "/Saves/saveBaseRoyStats.json");
+        string json = File.ReadAllText(Application.dataPath + "/Saves/saveBase" + this.name + "Stats.json");
         JsonUtility.FromJsonOverwrite(json, this);
     }
 
