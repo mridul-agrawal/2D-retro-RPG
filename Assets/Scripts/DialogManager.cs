@@ -44,7 +44,8 @@ public class DialogManager : MonoBehaviour
                 {
                     DialogueBox.SetActive(false);
                     justFinished = true;
-                    PlayerManager.instance.canMove = true;
+                    PlayerManager.instance.dialogOpen = false;
+                    PlayerManager.instance.CanPlayerMove();
                 }
 
                 currentLine++;
@@ -62,7 +63,8 @@ public class DialogManager : MonoBehaviour
         DialogueBox.SetActive(true);
         SpeakerBox.SetActive(isPerson);
         currentLine++;
-        PlayerManager.instance.canMove = false;
+        PlayerManager.instance.dialogOpen = true;
+        PlayerManager.instance.CanPlayerMove();
     }
 
     public void CheckIfName()

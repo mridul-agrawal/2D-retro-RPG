@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0c702884695754a837df706503b94e, type: 3}
   m_Name: Roy
   m_EditorClassIdentifier: 
+  mugshot: {fileID: 7152930139536384079, guid: a2ccdfd420ab6ab4c955522619c8bf3f, type: 3}
+  inPlayerPool: 1
   health: 100
   maxHealth: 100
   mana: 40

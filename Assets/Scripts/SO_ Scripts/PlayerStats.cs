@@ -6,6 +6,10 @@ using System.IO;
 [CreateAssetMenu(fileName = "PlayerStats", menuName = "ScriptableObjects/CharacterStats")]
 public class PlayerStats : ScriptableObject
 {
+    [SerializeField]
+    public Sprite mugshot;
+
+    public bool inPlayerPool;
     public int health;
     public int maxHealth;
     public int mana;

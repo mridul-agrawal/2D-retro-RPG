@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0c702884695754a837df706503b94e, type: 3}
   m_Name: Woody
   m_EditorClassIdentifier: 
+  mugshot: {fileID: 21300000, guid: e0ddba6d3fcf21f49949fcc95c849aac, type: 3}
+  inPlayerPool: 1
   health: 150
   maxHealth: 150
   mana: 10

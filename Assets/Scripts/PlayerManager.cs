@@ -12,11 +12,12 @@ public class PlayerManager : MonoBehaviour
     public Transform startPosition;
     private Vector2 minBound;
     private Vector2 maxBound;
+
     public bool canMove = true;
+    public bool dialogOpen, MenuOpen;
 
     public static PlayerManager instance;
 
-    // Start is called before the first frame update
     void Start()
     {
         if(instance == null)
@@ -36,14 +37,11 @@ public class PlayerManager : MonoBehaviour
         GetStartingPosition();
     }
 
-
     public void GetStartingPosition()
     {
         transform.position = startPosition.position;
     }
 
-
-    // Update is called once per frame
     void Update()
     {
         HandlePlayerInput();
@@ -75,7 +73,6 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-
     public void HandlePlayerAnimations()
     {
         if (canMove)
@@ -92,5 +89,15 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    public void CanPlayerMove()
+    {
+        if(MenuOpen || dialogOpen)
+        {
+            PlayerManager.instance.canMove = false;
+        } else
+        {
+            PlayerManager.instance.canMove = true;
+        }
+    }
 
 }
