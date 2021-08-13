@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &449715031750708120
+--- !u!1 &8865132739670630126
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 658261889913876226}
-  - component: {fileID: 7927422658621825531}
+  - component: {fileID: 8865132739670630124}
+  - component: {fileID: 8865132739670630125}
   m_Layer: 0
-  m_Name: EssentialLoader
+  m_Name: PlayerStatsManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &658261889913876226
+--- !u!4 &8865132739670630124
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449715031750708120}
+  m_GameObject: {fileID: 8865132739670630126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5781698, y: -2.7872252, z: -10.081642}
+  m_LocalPosition: {x: 5.524085, y: -2.4124463, z: -1.1717951}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7927422658621825531
+--- !u!114 &8865132739670630125
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449715031750708120}
+  m_GameObject: {fileID: 8865132739670630126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b543c08c3f2a6fe4bac24389744715e0, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e8aed4c519dc2a46910abe5e9889a77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UICanvas: {fileID: 6859384739889438920, guid: d134ea7e9a0acdc499f5678265a79107, type: 3}
-  Player: {fileID: 4040408661958028885, guid: 5b8476571dfe17a40be29fe3bc7668ab, type: 3}
-  PSManager: {fileID: 0}
+  ListOfPlayerStats:
+  - {fileID: 11400000, guid: 2b5b7a06ca5ce3a4591951ee6d34b75e, type: 2}
+  - {fileID: 11400000, guid: 9ba02c83b4cd7b244a2c194fa1ce9ccb, type: 2}

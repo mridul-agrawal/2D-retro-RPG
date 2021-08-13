@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0c702884695754a837df706503b94e, type: 3}
+  m_Name: Roy
+  m_EditorClassIdentifier: 
+  mugshot: {fileID: 7152930139536384079, guid: a2ccdfd420ab6ab4c955522619c8bf3f, type: 3}
+  inPlayerPool: 1
+  health: 100
+  maxHealth: 100
+  mana: 40
+  maxMana: 40
+  currentExp: 0
+  currentLevel: 0
+  maxLevel: 9
+  strength: 12
+  defense: 10
+  magic: 14
+  resistance: 8
+  weaponStrength: 5
+  armourStrength: 8
+  weaponEquipped: 
+  armourEquipped: 
+  expProgression: 6400000096000000c8000000c80000002c0100005e01000090010000f40100005802000020030000
+  maxHealthProgression: 0a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a000000
+  maxManaProgression: 0000000000000000000000000a0000000000000000000000000000000a0000000000000000000000
+  strengthProgression: 00000000010000000000000001000000000000000100000000000000010000000000000001000000
+  defenseProgression: 01000000000000000100000000000000010000000000000001000000000000000100000000000000
+  magicProgression: 01000000000000000100000000000000020000000000000001000000000000000100000002000000
+  resistanceProgression: 00000000010000000000000001000000010000000100000001000000000000000100000001000000
