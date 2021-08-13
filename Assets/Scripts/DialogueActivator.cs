@@ -45,7 +45,7 @@ public class DialogueActivator : MonoBehaviour
         }
     }
 
-    public void RectifyLines()
+    public void RectifyLines()      // Adds extra line space if needed to maintain the font size to be constant.
     {
         for(int i=0; i<Lines.Length; i++)
         {

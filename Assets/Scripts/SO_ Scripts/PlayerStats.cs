@@ -39,11 +39,12 @@ public class PlayerStats : ScriptableObject
 
     public void AddExp()
     {
-        AddExp(150);
+        AddExp(50);
     }
 
     public void AddExp(int expToAdd)
     {
+
         if (currentLevel == maxLevel)
         {
             currentExp = 0;
@@ -68,6 +69,8 @@ public class PlayerStats : ScriptableObject
         defense += defenseProgression[currentLevel];
         magic += magicProgression[currentLevel];
         resistance += resistanceProgression[currentLevel];
+        health = maxHealth;
+        mana = maxMana;
     }
 
     public void SavePlayerStats()

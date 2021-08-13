@@ -25,32 +25,53 @@ public class PlayerStatsManager : MonoBehaviour
     {
         foreach (PlayerStats ps in ListOfPlayerStats)
         {
-            ps.AddExp();
+            if(ps.inPlayerPool)
+            {
+                ps.AddExp();
+            }
         }
+        CallUpdateUIStats(false);
     }
 
     public void SaveAllPS()
     {
         foreach(PlayerStats ps in ListOfPlayerStats)
         {
-            ps.SavePlayerStats();
+            if(ps.inPlayerPool)
+            {
+                ps.SavePlayerStats();
+            }
         }
+        CallUpdateUIStats(true);
     }
 
     public void LoadAllPS()
     {
         foreach (PlayerStats ps in ListOfPlayerStats)
         {
-            ps.LoadPlayerStats();
+            if (ps.inPlayerPool)
+            {
+                ps.LoadPlayerStats();
+            }
         }
+        CallUpdateUIStats(true);
     }
 
     public void LoadAllBasePS()
     {
         foreach (PlayerStats ps in ListOfPlayerStats)
         {
-            ps.LoadBasePlayerStats();
+            if(ps.inPlayerPool)
+            {
+                ps.LoadBasePlayerStats();
+            }
         }
+        CallUpdateUIStats(true);
+    }
+
+    public void CallUpdateUIStats(bool initialized)
+    {
+        UIFade.UIinstance.gameObject.GetComponent<PauseMenuManager>().UpdateAllUIStats(initialized);
     }
 
 }
