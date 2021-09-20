@@ -13,6 +13,7 @@
 /[Aa]ssets/TilePallette/
 /[Aa]ssets/External Assets/
 /[Aa]ssets/TextMesh Pro/
+/[Aa]ssets/Art/
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
